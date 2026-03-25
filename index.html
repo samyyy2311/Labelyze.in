@@ -161,18 +161,19 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .istat span{color:var(--a)}
 .isub{font-size:15px;font-weight:300;color:var(--w2);max-width:480px;margin:0 auto;line-height:1.75}
 
-/* SCORING — 3 equal columns */
-.scoreg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:48px;align-items:start}
+/* SCORING — 2-col top, grade scale full-width below */
+.scoreg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;align-items:start}
 .scores{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--r);padding:24px;backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
 .scorest{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 .scorerow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:.5px solid var(--b1);font-size:13px;color:var(--w2)}
 .scorerow:last-child{border-bottom:none}
 .scorerow .v{font-family:var(--fd);font-weight:700;font-size:13px;white-space:nowrap;margin-left:12px;flex-shrink:0}
 .vn{color:var(--red)}.vp{color:var(--green)}
-.grades{display:flex;flex-direction:column;gap:8px;margin-top:4px}
-.gb{display:grid;grid-template-columns:40px 1fr;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;border:1px solid var(--card-border);background:var(--card-bg)}
-.gb-l{font-family:var(--fd);font-weight:900;font-size:20px;line-height:1;text-align:center}
-.gb-r{font-size:11px;color:var(--w3)}
+/* Grade scale: full-width horizontal strip */
+.grade-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
+.gb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px 12px;border-radius:var(--r);border:1px solid var(--card-border);background:var(--card-bg);text-align:center}
+.gb-l{font-family:var(--fd);font-weight:900;font-size:28px;line-height:1}
+.gb-desc{font-size:11px;color:var(--w3);line-height:1.45}
 .gA{border-color:rgba(0,200,150,.35);background:rgba(0,200,150,.08)}.gA .gb-l{color:var(--green)}
 .gB{border-color:rgba(91,184,255,.28);background:rgba(91,184,255,.06)}.gB .gb-l{color:var(--a)}
 .gC{border-color:rgba(244,187,114,.28);background:rgba(244,187,114,.06)}.gC .gb-l{color:var(--amber)}
@@ -265,6 +266,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   .vg{grid-template-columns:repeat(3,1fr)}
   .fr{grid-template-columns:50px 1fr;gap:20px;padding:22px 24px}
   .scoreg{grid-template-columns:1fr}
+  .grade-strip{grid-template-columns:repeat(3,1fr)}
   .sec{padding:64px 0}
   .si,.msinn,.csm{padding:0 20px}
   .cta-out{padding:0 20px}
@@ -346,7 +348,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <div class="ov-h2">12. Changes to this policy</div>
     <p class="ov-p">If we make material changes, we will update the date at the top of this page and notify you via the app or by email if you have subscribed. The latest version is always available at labelyze.in.</p>
     <div class="ov-h2">13. Contact</div>
-    <p class="ov-p">Labelyze by CaffeineLabs, India<br>Email: <a href="mailto:founder@labelyze.in">founder&#64;labelyze.in</a><br>Website: <a href="https://caffeinelabs.in" target="_blank" rel="noopener">caffeinelabs.in</a></p>
+    <p class="ov-p">Labelyze by CaffeineLabs, India<br>Email: <a href="/cdn-cgi/l/email-protection#0f69607a616b6a7d4f636e6d6a6376756a216661">founder&#64;labelyze.in</a><br>Website: <a href="https://caffeinelabs.in" target="_blank" rel="noopener">caffeinelabs.in</a></p>
   </div>
 </div>
 
@@ -480,17 +482,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
         <div class="scorerow"><span>Sodium &gt; 1,500mg per 100g</span><span class="v vn">-8 pts</span></div>
         <div class="scorerow"><span>Saturated fat &gt; 5g per 100g</span><span class="v vn">-5 pts</span></div>
       </div>
-      <div class="scores">
-        <div class="scorest">Grade scale</div>
-        <div class="grades">
-          <div class="gb gA"><span class="gb-l">A</span><span class="gb-r">85 to 100 — Clean. Few or no concerns.</span></div>
-          <div class="gb gB"><span class="gb-l">B</span><span class="gb-r">70 to 84 — Generally good. Minor flags.</span></div>
-          <div class="gb gC"><span class="gb-l">C</span><span class="gb-r">55 to 69 — Moderate. Worth reading.</span></div>
-          <div class="gb gD"><span class="gb-l">D</span><span class="gb-r">40 to 54 — Caution. Multiple concerns.</span></div>
-          <div class="gb gE"><span class="gb-l">E</span><span class="gb-r">Below 40 — Avoid. Banned or harmful.</span></div>
-        </div>
-      </div>
-      <div>
+      <div style="display:flex;flex-direction:column;gap:16px">
         <div class="scores">
           <div class="scorest">Positive signals</div>
           <div class="scorerow"><span>Whole grain as first ingredient</span><span class="v vp">+5 pts</span></div>
@@ -498,11 +490,19 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
           <div class="scorerow"><span>No added sugar</span><span class="v vp">+3 pts</span></div>
           <div class="scorerow"><span>Organic certified</span><span class="v vp">+2 pts</span></div>
         </div>
-        <div class="scores" style="margin-top:16px">
+        <div class="scores">
           <div class="scorest">What the score is not</div>
           <p style="font-size:13px;color:var(--w2);line-height:1.7">A decision aid, not a medical opinion. Based on publicly available regulatory data. Every penalty and every bonus is shown to you with its reason. No unexplained numbers.</p>
         </div>
       </div>
+    </div>
+    <!-- Grade scale: full-width horizontal strip -->
+    <div class="grade-strip rv">
+      <div class="gb gA"><span class="gb-l">A</span><span class="gb-desc">85 to 100<br>Clean. Few or no concerns.</span></div>
+      <div class="gb gB"><span class="gb-l">B</span><span class="gb-desc">70 to 84<br>Generally good. Minor flags.</span></div>
+      <div class="gb gC"><span class="gb-l">C</span><span class="gb-desc">55 to 69<br>Moderate. Worth reading.</span></div>
+      <div class="gb gD"><span class="gb-l">D</span><span class="gb-desc">40 to 54<br>Caution. Multiple concerns.</span></div>
+      <div class="gb gE"><span class="gb-l">E</span><span class="gb-desc">Below 40<br>Avoid. Banned or harmful.</span></div>
     </div>
   </div>
 </div>
@@ -579,14 +579,14 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <div class="flinks">
     <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
     <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X</a>
-    <a href="mailto:founder@labelyze.in">founder&#64;labelyze.in</a>
+    <a href="/cdn-cgi/l/email-protection#ec8a83998288899eac808d8e8980959689c28582">founder&#64;labelyze.in</a>
     <a onclick="openPP()">Privacy</a>
     <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
   </div>
 </footer>
 
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var html=document.documentElement;
   var saved=localStorage.getItem('lyz_theme')||'dark';
