@@ -99,25 +99,12 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .fb2{position:absolute;bottom:4px;left:-8px;transform:translateX(-100%);background:rgba(91,184,255,.08);border:.5px solid rgba(91,184,255,.24);border-radius:8px;padding:5px 9px;font-size:10px;color:var(--a);white-space:nowrap;font-weight:600;animation:sli 5s ease-in-out infinite}
 @keyframes sli{0%,38%{opacity:0;transform:translateX(calc(-100% - 6px))}65%,100%{opacity:1;transform:translateX(-100%)}}
 
-/* Store badges */
+/* Store badges — pure typography, both identical */
 .badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
-.badge{display:inline-flex;align-items:center;gap:11px;padding:11px 20px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;text-decoration:none;transition:border-color .2s,background .2s,transform .2s;min-width:178px}
-.badge:hover{border-color:var(--aborder);background:var(--adim);transform:translateY(-2px)}
-/* Image-only badge — no inner padding/bg, just the image */
-.badge.badge-img{padding:6px 12px;min-width:0;background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)}
-.badge.badge-img:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.22);transform:translateY(-2px)}
-.badge.badge-img img{display:block;height:40px;width:auto}
-/* Indus badge — always inline SVG, matches real logo */
-.badge-indus{display:inline-flex;align-items:center;gap:11px;padding:10px 18px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;text-decoration:none;transition:all .2s}
-.badge-indus:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.22);transform:translateY(-2px)}
-.indus-icon{flex-shrink:0}
-.indus-text{display:flex;flex-direction:column}
-.indus-sub{font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase}
-.indus-name{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1);line-height:1.2}
-.badge-icon{width:32px;height:32px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.badge-text{display:flex;flex-direction:column}
-.badge-sub{font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase}
-.badge-name{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1);line-height:1.2}
+.badge{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;padding:12px 22px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:14px;text-decoration:none;transition:background .2s,border-color .2s,transform .2s;min-width:160px}
+.badge:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.24);transform:translateY(-2px)}
+.badge-sub{font-size:9px;color:var(--w3);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fb)}
+.badge-name{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--w1);line-height:1.2;letter-spacing:-0.01em}
 .bnote{font-size:11px;color:var(--w3);text-align:center;margin-top:14px;letter-spacing:.02em}
 
 /* Stats */
@@ -394,14 +381,13 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     </div>
     <div class="fu d4">
       <div class="badges">
-        <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
+        <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge" target="_blank" rel="noopener">
+          <span class="badge-sub">Get it on</span>
+          <span class="badge-name">Google Play</span>
         </a>
         <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
-          <div class="badge-text">
-            <span class="badge-sub">Available on</span>
-            <span class="badge-name">Indus App Store</span>
-          </div>
+          <span class="badge-sub">Available on</span>
+          <span class="badge-name">Indus App Store</span>
         </a>
       </div>
       <p class="bnote">Free to download · No account needed · Works fully offline</p>
@@ -553,14 +539,13 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <h2>Make better decisions about<br><span>what you bring home.</span></h2>
     <p>Download Labelyze. Free. No account required. Works offline from day one.</p>
     <div class="cta-badges">
-      <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
+      <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge" target="_blank" rel="noopener">
+        <span class="badge-sub">Get it on</span>
+        <span class="badge-name">Google Play</span>
       </a>
       <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
-        <div class="badge-text">
-          <span class="badge-sub">Available on</span>
-          <span class="badge-name">Indus App Store</span>
-        </div>
+        <span class="badge-sub">Available on</span>
+        <span class="badge-name">Indus App Store</span>
       </a>
     </div>
   </div>
