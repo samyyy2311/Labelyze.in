@@ -54,10 +54,10 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .nl{font-size:13px;font-weight:400;color:var(--w3);text-decoration:none;padding:6px 14px;border-radius:100px;transition:color .2s,background .2s;white-space:nowrap}
 .nl:hover{color:var(--w1);background:rgba(255,255,255,0.07)}
 .nav-r{display:flex;align-items:center;gap:10px;flex-shrink:0;position:relative;z-index:1}
-.tt{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,0.07);border:1px solid var(--card-border);cursor:pointer;position:relative;flex-shrink:0}
-.tt-thumb{position:absolute;top:4px;left:4px;width:14px;height:14px;border-radius:50%;background:var(--w1);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.tt{width:42px;height:24px;border-radius:100px;background:rgba(255,255,255,0.07);border:1px solid var(--card-border);cursor:pointer;position:relative;flex-shrink:0;overflow:hidden}
+.tt-thumb{position:absolute;top:4px;left:4px;width:14px;height:14px;border-radius:50%;background:var(--w1);transition:transform .25s cubic-bezier(.34,1.56,.64,1);z-index:2}
 [data-theme="light"] .tt-thumb{transform:translateX(18px)}
-.tt-icon{position:absolute;top:50%;right:5px;transform:translateY(-50%);font-size:9px;pointer-events:none;line-height:1}
+.tt-icon{position:absolute;top:50%;transform:translateY(-50%);font-size:9px;pointer-events:none;line-height:1;right:5px;z-index:1}
 [data-theme="light"] .tt-icon{right:auto;left:5px}
 .ncta{display:inline-flex;align-items:center;height:34px;padding:0 20px;background:var(--a);border:none;border-radius:100px;font-family:var(--fd);font-size:12px;font-weight:700;color:#08090C;cursor:pointer;white-space:nowrap;text-decoration:none;transition:opacity .2s,transform .2s}
 .ncta:hover{opacity:.86;transform:translateY(-1px)}
@@ -107,6 +107,13 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .badge.badge-img{padding:6px 12px;min-width:0;background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)}
 .badge.badge-img:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.22);transform:translateY(-2px)}
 .badge.badge-img img{display:block;height:40px;width:auto}
+/* Indus badge — always inline SVG, matches real logo */
+.badge-indus{display:inline-flex;align-items:center;gap:11px;padding:10px 18px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;text-decoration:none;transition:all .2s}
+.badge-indus:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.22);transform:translateY(-2px)}
+.indus-icon{flex-shrink:0}
+.indus-text{display:flex;flex-direction:column}
+.indus-sub{font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase}
+.indus-name{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1);line-height:1.2}
 .badge-icon{width:32px;height:32px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .badge-text{display:flex;flex-direction:column}
 .badge-sub{font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase}
@@ -123,7 +130,7 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .sfn p{font-size:10px;color:var(--w3);letter-spacing:.03em}
 
 /* Sections */
-.sec{padding:96px 0}
+.sec{padding:96px 0;position:relative;z-index:1}
 .si{max-width:1160px;margin:0 auto;padding:0 48px}
 .ey{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--a);margin-bottom:16px}
 .st{font-family:var(--fd);font-weight:900;font-size:clamp(28px,3.5vw,44px);letter-spacing:-1.5px;line-height:1.08;color:var(--w1);margin-bottom:14px}
@@ -334,7 +341,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <p class="ov-p">If this policy changes, the updated version will be published at labelyze.in/privacy with a new effective date.</p>
 
     <div class="ov-h2">Contact</div>
-    <p class="ov-p">For any privacy questions: <a href="mailto:hello@labelyze.in">hello&#64;labelyze.in</a></p>
+    <p class="ov-p">For any privacy questions: <a href="/cdn-cgi/l/email-protection#127a777e7e7d527e7370777e6b68773c7b7c">hello&#64;labelyze.in</a></p>
   </div>
 </div>
 
@@ -386,8 +393,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
         </a>
         <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
-          <img src="https://www.indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48"
-            onerror="this.onerror=null;this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;gap:10px;padding:4px 8px\'><svg width=28 height=28 viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=50 cy=50 r=50 fill=\'#1A237E\'/><circle cx=50 cy=22 r=11 fill=\'#FFA726\'/><path d=\'M32 36 L50 52 L68 36 L68 44 L50 60 L32 44 Z\' fill=\'#FF7043\'/><path d=\'M32 54 L50 70 L68 54 L68 62 L50 78 L32 62 Z\' fill=\'#E91E8C\'/></svg><div><div style=\'font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase\'>Available on</div><div style=\'font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1)\'>Indus App Store</div></div></div>'">
+          <img src="https://indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48" onerror="this.closest('a').innerHTML='<span style=\'display:flex;align-items:center;gap:10px;padding:2px 6px\'><span style=\'font-size:22px\'>📱</span><span><span style=\'display:block;font-size:9px;color:rgba(244,241,235,0.3);letter-spacing:.07em;text-transform:uppercase\'>Available on</span><span style=\'font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;color:#F4F1EB\'>Indus App Store</span></span></span>'">
         </a>
       </div>
       <p class="bnote">Free to download · No account needed · Works fully offline</p>
@@ -399,7 +405,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <div class="sc"><div class="sn">320+</div><div class="sl2">Ingredients tracked, each with a cited regulatory source</div></div>
   <div class="sc"><div class="sn">5</div><div class="sl2">Regulatory bodies cross-checked on every scan</div></div>
   <div class="sc"><div class="sn">100%</div><div class="sl2">Of your personal health data stays on your device. Always.</div></div>
-  <div class="sc"><div class="sn">&#8377;0</div><div class="sl2">To download and start scanning</div></div>
+  <div class="sc"><div class="sn">Free</div><div class="sl2">To download and start scanning. No account. No ads.</div></div>
   <div class="sfn"><p>Based on comparative analysis of EU EFSA Regulation (EC) No 1333/2008, FSSAI Food Safety and Standards Act 2006, and US FDA Code of Federal Regulations Title 21.</p></div>
 </div>
 
@@ -431,15 +437,9 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
       <div class="fr"><div class="fn">01</div><div><div class="ft">Personalised Safety Verdict</div><div class="fd3">The first thing you see is a one-line verdict based on your exact health profile and dietary conditions. If you have diabetes, IBS, or a lactose intolerance, the verdict accounts for that. Set your conditions once and every scan is personalised from there.</div><div class="tag tr">Core Feature</div></div></div>
       <div class="fr"><div class="fn">02</div><div><div class="ft">Banned Elsewhere. Known Here.</div><div class="fd3">When an ingredient is prohibited in the EU or US but sold freely in India, you know before you buy. Every flag shows which regulation applies, when it was enacted, and the health reason behind it. No black-box warnings. Every claim has a source.</div><div class="tag tr">India Gap</div></div></div>
       <div class="fr"><div class="fn">03</div><div><div class="ft">Works Fully Offline</div><div class="fd3">Barcode lookups run entirely against a local database on your device. No internet required for most scans. This is not a connectivity feature — it is how the app is built. Works the same in a supermarket basement with no signal.</div><div class="tag tg">Offline First</div></div></div>
-      <div class="fr"><div class="fn">04</div><div><div class="ft">Four Ways to Scan</div><div class="fd3">Barcode scan, ingredient OCR (photograph the ingredient panel), gallery import, or manual paste. If a barcode is not in the database, you land on a submission screen to contribute it or analyse it locally without sharing anything.</div><div class="tag tb">Flexible</div></div></div>
-      <div class="fr"><div class="fn">05</div><div><div class="ft">Ingredient Frequency Tracking</div><div class="fd3">Every flagged ingredient card shows how often it has appeared across your last 20 scans. If you are unknowingly eating the same additive across ten different products every week, your history will surface that pattern before it becomes a habit.</div><div class="tag tb">Pattern Tracking</div></div></div>
-      <div class="fr"><div class="fn">06</div><div><div class="ft">Compare Any Two Products</div><div class="fd3">Select any two products from your history and open a side-by-side comparison: scores, banned and caution counts, full ingredient lists, and a verdict naming the better pick with the point difference. Also available from Discover for your two most recent scans.</div><div class="tag tb">Compare</div></div></div>
-      <div class="fr"><div class="fn">07</div><div><div class="ft">Brand Deep-Dive</div><div class="fd3">Tap any brand name on a result screen to open its dedicated page. Every product from that brand in the database sorted by score, with a breakdown bar showing what proportion fall into Good, Average, and Poor bands.</div><div class="tag tb">Discover</div></div></div>
-      <div class="fr"><div class="fn">08</div><div><div class="ft">Save, Avoid, and Personal Notes</div><div class="fd3">Bookmark any product to your Saved list for quick re-checks, or add it to Avoid as a reminder to skip it. Attach a private note to any product — it is highlighted every time you return to that result.</div><div class="tag tg">Organise</div></div></div>
-      <div class="fr"><div class="fn">09</div><div><div class="ft">NOVA Ultra-Processing Flag</div><div class="fd3">When a product is ultra-processed (NOVA 4) but has no individually flagged additives, an inline note explains the distinction so you are not misled by a clean-looking ingredient list.</div><div class="tag tg">Honest Scoring</div></div></div>
-      <div class="fr"><div class="fn">10</div><div><div class="ft">Your Data Never Leaves Your Device</div><div class="fd3">Scan history, health profiles, dietary preferences, personal notes, watchlist. All processed entirely on your phone. Never sent to servers. This is how it is built, not a policy that can change.</div><div class="tag tg">Privacy by Design</div></div></div>
-      <div class="fr"><div class="fn">11</div><div><div class="ft">Label Lie Detector</div><div class="fd3">Every claim on the front of the pack checked against the actual ingredient list. Zero Sugar hiding maltodextrin. High Protein that does not meet the EU threshold. Caught every time, with evidence.</div><div class="tag ty">Coming Soon</div></div></div>
-      <div class="fr"><div class="fn">12</div><div><div class="ft">AR Shelf Scanning</div><div class="fd3">Point your camera at a supermarket aisle and safety scores appear live above every product in view. No tapping. See the verdict before you reach for the shelf.</div><div class="tag ty">Coming Soon</div></div></div>
+      <div class="fr"><div class="fn">04</div><div><div class="ft">Your Data Never Leaves Your Device</div><div class="fd3">Scan history, health profiles, dietary preferences, personal notes, watchlist. All processed entirely on your phone. Never sent to servers. This is how it is built, not a policy that can change.</div><div class="tag tg">Privacy by Design</div></div></div>
+      <div class="fr"><div class="fn">05</div><div><div class="ft">Label Lie Detector</div><div class="fd3">Every claim on the front of the pack checked against the actual ingredient list. Zero Sugar hiding maltodextrin. High Protein that does not meet the EU threshold. Caught every time, with evidence.</div><div class="tag ty">Coming Soon</div></div></div>
+      <div class="fr"><div class="fn">06</div><div><div class="ft">AR Shelf Scanning</div><div class="fd3">Point your camera at a supermarket aisle and safety scores appear live above every product in view. No tapping. See the verdict before you reach for the shelf.</div><div class="tag ty">Coming Soon</div></div></div>
     </div>
   </div>
 </div>
@@ -549,8 +549,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
       </a>
       <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
-        <img src="https://www.indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48"
-          onerror="this.onerror=null;this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;gap:10px;padding:4px 8px\'><svg width=28 height=28 viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=50 cy=50 r=50 fill=\'#1A237E\'/><circle cx=50 cy=22 r=11 fill=\'#FFA726\'/><path d=\'M32 36 L50 52 L68 36 L68 44 L50 60 L32 44 Z\' fill=\'#FF7043\'/><path d=\'M32 54 L50 70 L68 54 L68 62 L50 78 L32 62 Z\' fill=\'#E91E8C\'/></svg><div><div style=\'font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase\'>Available on</div><div style=\'font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1)\'>Indus App Store</div></div></div>'">
+        <img src="https://indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48" onerror="this.closest('a').innerHTML='<span style=\'display:flex;align-items:center;gap:10px;padding:2px 6px\'><span style=\'font-size:22px\'>📱</span><span><span style=\'display:block;font-size:9px;color:rgba(244,241,235,0.3);letter-spacing:.07em;text-transform:uppercase\'>Available on</span><span style=\'font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;color:#F4F1EB\'>Indus App Store</span></span></span>'">
       </a>
     </div>
   </div>
@@ -565,14 +564,14 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <div class="flinks">
     <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
     <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X</a>
-    <a href="mailto:founder@labelyze.in">founder&#64;labelyze.in</a>
+    <a href="/cdn-cgi/l/email-protection#14727b617a7071665478757671786d6e713a7d7a">founder&#64;labelyze.in</a>
     <a onclick="openPP()">Privacy</a>
     <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
   </div>
 </footer>
 
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var html=document.documentElement;
   var saved=localStorage.getItem('lyz_theme')||'dark';
