@@ -103,6 +103,10 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
 .badge{display:inline-flex;align-items:center;gap:11px;padding:11px 20px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;text-decoration:none;transition:border-color .2s,background .2s,transform .2s;min-width:178px}
 .badge:hover{border-color:var(--aborder);background:var(--adim);transform:translateY(-2px)}
+/* Image-only badge — no inner padding/bg, just the image */
+.badge.badge-img{padding:6px 12px;min-width:0;background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12)}
+.badge.badge-img:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.22);transform:translateY(-2px)}
+.badge.badge-img img{display:block;height:40px;width:auto}
 .badge-icon{width:32px;height:32px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .badge-text{display:flex;flex-direction:column}
 .badge-sub{font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase}
@@ -178,7 +182,7 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .gB{border-color:rgba(91,184,255,.28);background:rgba(91,184,255,.06)}.gB .gb-l{color:var(--a)}
 .gC{border-color:rgba(244,187,114,.28);background:rgba(244,187,114,.06)}.gC .gb-l{color:var(--amber)}
 .gD{border-color:rgba(255,92,92,.22);background:rgba(255,92,92,.05)}.gD .gb-l{color:#FF8080}
-.gE{border-color:rgba(255,92,92,.35);background:rgba(255,92,92,.09)}.gE .gb-l{color:var(--red)}
+.gF{border-color:rgba(255,92,92,.35);background:rgba(255,92,92,.09)}.gF .gb-l{color:var(--red)}
 
 /* Mission */
 .mssec{padding:96px 0;background:var(--s1);border-top:.5px solid var(--b1);border-bottom:.5px solid var(--b1)}
@@ -304,51 +308,33 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   </div>
   <div class="ov-inn">
     <h1 class="ov-h1">Privacy Policy</h1>
-    <span class="ov-date">Effective: March 2026 · Built by CaffeineLabs, India</span>
-    <div class="ov-h2">Overview</div>
-    <p class="ov-p">Labelyze is built on a single privacy principle: your personal data belongs on your device, not on our servers. This policy explains precisely what we collect, what we do not collect, and why the architecture makes that guarantee structural rather than just a policy promise.</p>
-    <div class="ov-h2">1. What we collect in the app</div>
-    <p class="ov-p">Nothing. The Labelyze app collects no personal data from you. There is no account, no login, no registration, and no user identifier of any kind. Specifically:</p>
-    <ul class="ov-ul">
-      <li>Your scan history is stored only in local device storage and never transmitted anywhere</li>
-      <li>Your health conditions, dietary preferences, and food goals are stored only on your device</li>
-      <li>Your ingredient watchlist and all profile settings are device-local only</li>
-      <li>Your scan streaks and pattern data never leave your phone</li>
-      <li>Scan history exports are triggered entirely by you and delivered directly to your device share sheet</li>
-    </ul>
-    <div class="ov-h2">2. What we collect on this website</div>
-    <p class="ov-p">If you sign up for launch updates on this website, we collect your email address only. It is used solely to notify you about Labelyze. We do not sell, rent, or share it with any third party. You can unsubscribe at any time by replying to any email we send.</p>
-    <p class="ov-p">This website does not use tracking cookies, third-party analytics scripts, advertising pixels, or behavioural tracking of any kind.</p>
-    <div class="ov-h2">3. Product database and Open Food Facts</div>
-    <p class="ov-p">Labelyze uses product data from <a href="https://openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a>, licensed under the Open Database License (ODbL). For routine scans, all data queries run against a local SQLite database bundled with the app. Nothing leaves your device.</p>
-    <p class="ov-p">For barcodes not in the local database, the app may query the Open Food Facts REST API. This sends only the barcode number — no personal data, no health profile, no identity information. Labelyze is not affiliated with or endorsed by Open Food Facts.</p>
-    <div class="ov-h2">4. Product submissions</div>
-    <p class="ov-p">When a product is missing from the database, you can submit it voluntarily. Before any submission is sent, you are shown exactly what will be shared and asked to confirm:</p>
-    <ul class="ov-ul">
-      <li>Submissions include only the product name, brand, ingredient text, and an optional photo</li>
-      <li>You choose at submission time whether to share anonymously with Open Food Facts as well</li>
-      <li>The default for this choice is set by your global sharing preference in Profile, which you control</li>
-      <li>Submissions made while offline are queued locally and retried automatically when connectivity returns</li>
-      <li>Submitted product data may become publicly visible via Open Food Facts under the ODbL licence</li>
-    </ul>
-    <div class="ov-h2">5. Community notes</div>
-    <p class="ov-p">The Community tab allows you to view and submit product observations. Submitted notes are associated with the product barcode only, not with any personal identifier. Do not include personal information in community submissions.</p>
-    <div class="ov-h2">6. Weekly summary notifications</div>
-    <p class="ov-p">Labelyze offers an optional Sunday digest notification summarising your week's scans. This is opt-in, processed entirely on-device, and never transmitted to us. You can disable it at any time from Profile.</p>
-    <div class="ov-h2">7. Advertising and third-party SDKs</div>
-    <p class="ov-p">Labelyze contains no advertising. There are no advertising SDKs, no ad networks, no third-party analytics SDKs, and no crash reporting tools in the app at launch. If we add crash reporting in a future version, it will be disclosed in an updated policy and you will be notified.</p>
-    <div class="ov-h2">8. DPDP Act 2023 compliance</div>
-    <p class="ov-p">Labelyze is designed to comply with India's Digital Personal Data Protection Act 2023. We collect only the minimum data necessary, for the specific purpose stated, and do not retain it beyond that purpose. Because the app processes all personal data on-device, the Act's data fiduciary obligations apply only to the limited email data collected via this website.</p>
-    <div class="ov-h2">9. Children's privacy</div>
-    <p class="ov-p">Labelyze is a general audience app. We do not knowingly collect personal data from children under 13. The app requires no account and collects no personal data, which means children can use it without any data being transmitted. If you believe a child has submitted personal data via this website, contact us immediately and we will delete it.</p>
-    <div class="ov-h2">10. Data retention</div>
-    <p class="ov-p">App data is retained on your device until you delete the app or clear app data. No copy exists on our servers. Website email signups are retained until you unsubscribe or request deletion. Product submissions shared with Open Food Facts are governed by ODbL; our copy is retained for database improvement only and is not linked to you personally.</p>
-    <div class="ov-h2">11. Your rights</div>
-    <p class="ov-p">Because the app stores no personal data on our servers, there is nothing for us to access, correct, or delete on your behalf for app usage. For website email data, you have the right to access, correct, or delete it at any time by contacting us.</p>
-    <div class="ov-h2">12. Changes to this policy</div>
-    <p class="ov-p">If we make material changes, we will update the date at the top of this page and notify you via the app or by email if you have subscribed. The latest version is always available at labelyze.in.</p>
-    <div class="ov-h2">13. Contact</div>
-    <p class="ov-p">Labelyze by CaffeineLabs, India<br>Email: <a href="/cdn-cgi/l/email-protection#0f69607a616b6a7d4f636e6d6a6376756a216661">founder&#64;labelyze.in</a><br>Website: <a href="https://caffeinelabs.in" target="_blank" rel="noopener">caffeinelabs.in</a></p>
+    <span class="ov-date">Effective: 1 April 2026</span>
+
+    <div class="ov-h2">What we collect</div>
+    <p class="ov-p">Labelyze does not collect any personal information. There is no account, no login, and no profile linked to you.</p>
+    <p class="ov-p">Your scan history, health profile, allergen selections, dietary preferences, ingredient watchlist, personal notes, and weekly goal are all stored locally on your device. None of this data is transmitted to any server.</p>
+
+    <div class="ov-h2">Product submissions</div>
+    <p class="ov-p">If you choose to submit a missing product, you are sharing: the product name, brand, barcode, category, ingredients, and optionally nutrition information. This is submitted to a database managed by CaffeineLabs for the purpose of improving the product database. Submissions are opt-in only. You can turn off sharing at any time in Profile &gt; Data and Privacy, or during onboarding.</p>
+    <p class="ov-p">When sharing is turned off, no data from your device is sent anywhere.</p>
+
+    <div class="ov-h2">Analytics and advertising</div>
+    <p class="ov-p">Labelyze contains no analytics, no advertising SDKs, and no third-party trackers of any kind.</p>
+
+    <div class="ov-h2">Notifications</div>
+    <p class="ov-p">If you opt in to the weekly summary notification, this is scheduled locally on your device. No data is sent to a server to trigger it.</p>
+
+    <div class="ov-h2">App review prompt</div>
+    <p class="ov-p">The app may ask you to rate it on the Play Store using the standard in-app review prompt. This prompt is provided by Google. No data is collected or shared by Labelyze as part of this prompt.</p>
+
+    <div class="ov-h2">Children</div>
+    <p class="ov-p">Labelyze does not knowingly collect data from anyone, including children. No personal data is collected at all.</p>
+
+    <div class="ov-h2">Changes</div>
+    <p class="ov-p">If this policy changes, the updated version will be published at labelyze.in/privacy with a new effective date.</p>
+
+    <div class="ov-h2">Contact</div>
+    <p class="ov-p">For any privacy questions: <a href="mailto:hello@labelyze.in">hello&#64;labelyze.in</a></p>
   </div>
 </div>
 
@@ -396,13 +382,12 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     </div>
     <div class="fu d4">
       <div class="badges">
-        <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge" target="_blank" rel="noopener">
-          <div class="badge-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3.18 1.37C2.47 1.77 2 2.53 2 3.41v17.18c0 .88.47 1.64 1.18 2.04l.1.06 9.62-9.62v-.23L3.28 3.31l-.1.06Z" fill="#4285F4"/><path d="m16.11 15.79-3.2-3.2v-.23l3.2-3.2.07.04 3.8 2.16c1.08.62 1.08 1.62 0 2.23l-3.8 2.16-.07.04Z" fill="#FBBC04"/><path d="m16.18 15.75-3.27-3.26L3.18 22.21c.36.38.94.43 1.59.06l11.41-6.52" fill="#EA4335"/><path d="M16.18 8.25 4.77 1.73C4.12 1.36 3.54 1.41 3.18 1.8l9.73 9.72 3.27-3.27Z" fill="#34A853"/></svg></div>
-          <div class="badge-text"><span class="badge-sub">Get it on</span><span class="badge-name">Google Play</span></div>
+        <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
         </a>
-        <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
-          <div class="badge-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="rgba(91,184,255,0.12)" stroke="rgba(91,184,255,0.4)" stroke-width="1.2"/><path d="M10 22 L16 10 L22 22 M12.5 18 H19.5" stroke="#5BB8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
-          <div class="badge-text"><span class="badge-sub">Available on</span><span class="badge-name">Indus App Store</span></div>
+        <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
+          <img src="https://www.indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48"
+            onerror="this.onerror=null;this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;gap:10px;padding:4px 8px\'><svg width=28 height=28 viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=50 cy=50 r=50 fill=\'#1A237E\'/><circle cx=50 cy=22 r=11 fill=\'#FFA726\'/><path d=\'M32 36 L50 52 L68 36 L68 44 L50 60 L32 44 Z\' fill=\'#FF7043\'/><path d=\'M32 54 L50 70 L68 54 L68 62 L50 78 L32 62 Z\' fill=\'#E91E8C\'/></svg><div><div style=\'font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase\'>Available on</div><div style=\'font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1)\'>Indus App Store</div></div></div>'">
         </a>
       </div>
       <p class="bnote">Free to download · No account needed · Works fully offline</p>
@@ -411,7 +396,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
 </div>
 
 <div class="sg rv">
-  <div class="sc"><div class="sn">300+</div><div class="sl2">Ingredients tracked, each with a cited regulatory source</div></div>
+  <div class="sc"><div class="sn">320+</div><div class="sl2">Ingredients tracked, each with a cited regulatory source</div></div>
   <div class="sc"><div class="sn">5</div><div class="sl2">Regulatory bodies cross-checked on every scan</div></div>
   <div class="sc"><div class="sn">100%</div><div class="sl2">Of your personal health data stays on your device. Always.</div></div>
   <div class="sc"><div class="sn">&#8377;0</div><div class="sl2">To download and start scanning</div></div>
@@ -443,16 +428,18 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <h2 class="st rv">Everything a label<br>won't tell you.</h2>
     <p class="ss rv">Every product runs through a full multi-layer analysis the moment you scan it.</p>
     <div class="fl2 rv">
-      <div class="fr"><div class="fn">01</div><div><div class="ft">Personalised Safety Verdict</div><div class="fd3">The first thing you see is a one-line verdict: "Safe for you" or "Concern for you." This is not a generic score. It is generated against your exact health profile. If you have diabetes, IBS, or a lactose intolerance, the verdict accounts for that. Set your conditions once and every scan is personalised from there.</div><div class="tag tr">Core Feature</div></div></div>
+      <div class="fr"><div class="fn">01</div><div><div class="ft">Personalised Safety Verdict</div><div class="fd3">The first thing you see is a one-line verdict based on your exact health profile and dietary conditions. If you have diabetes, IBS, or a lactose intolerance, the verdict accounts for that. Set your conditions once and every scan is personalised from there.</div><div class="tag tr">Core Feature</div></div></div>
       <div class="fr"><div class="fn">02</div><div><div class="ft">Banned Elsewhere. Known Here.</div><div class="fd3">When an ingredient is prohibited in the EU or US but sold freely in India, you know before you buy. Every flag shows which regulation applies, when it was enacted, and the health reason behind it. No black-box warnings. Every claim has a source.</div><div class="tag tr">India Gap</div></div></div>
-      <div class="fr"><div class="fn">03</div><div><div class="ft">Works Fully Offline</div><div class="fd3">Barcode lookups run entirely against a local database on your device. No internet required for most scans. This is not a connectivity feature — it is how the app is built. For Indian users with patchy data, or anyone scanning in a supermarket basement, it works the same either way.</div><div class="tag tg">Offline First</div></div></div>
-      <div class="fr"><div class="fn">04</div><div><div class="ft">No Barcode? Scan the Ingredient Text.</div><div class="fd3">Point your camera at the ingredient list printed on any pack. Labelyze reads the text directly using OCR, analyses it, and gives you a full score without needing a barcode. Works on imported products, loose items, and anything the database has not seen yet.</div><div class="tag tb">OCR Scan</div></div></div>
-      <div class="fr"><div class="fn">05</div><div><div class="ft">Ingredient Frequency Tracking</div><div class="fd3">Every flagged ingredient card shows how often it has appeared across your last 20 scans. If you are unknowingly eating the same additive across ten different products every week, your history will surface that pattern before it becomes a habit. One exposure is rarely the concern. Accumulation is.</div><div class="tag tb">Pattern Tracking</div></div></div>
-      <div class="fr"><div class="fn">06</div><div><div class="ft">Your Data Never Leaves Your Device</div><div class="fd3">Health profiles, dietary preferences, scan history. All processed entirely on your phone. Never sent to servers. Never stored elsewhere. This is how it is built, not a policy that can change.</div><div class="tag tg">Privacy by Design</div></div></div>
-      <div class="fr"><div class="fn">07</div><div><div class="ft">Profiles for Every Diet and Condition</div><div class="fd3">Set your health conditions (diabetes, hypertension, PCOS, IBS, celiac, pregnancy and more) and dietary preferences (vegan, Jain, keto, gluten-free, no onion/garlic and more). Every result is then checked against your profile and flags what matters specifically to you, not just globally.</div><div class="tag tg">Personalised</div></div></div>
-      <div class="fr"><div class="fn">08</div><div><div class="ft">Share What You Find</div><div class="fd3">Scan a product, get the score, share the result directly to WhatsApp or Instagram Stories. One tap. No screenshots needed.</div><div class="tag tb">Share</div></div></div>
-      <div class="fr"><div class="fn">09</div><div><div class="ft">Label Lie Detector</div><div class="fd3">We read every claim on the front of the pack and check it against the actual ingredient list. Zero Sugar hiding maltodextrin. High Protein that does not meet the EU threshold. Caught every time, with evidence.</div><div class="tag ty">Coming Soon</div></div></div>
-      <div class="fr"><div class="fn">10</div><div><div class="ft">AR Shelf Scanning</div><div class="fd3">Point your camera at a supermarket aisle and safety scores appear live above every product in view. No tapping. See the verdict before you reach for the shelf.</div><div class="tag ty">Coming Soon</div></div></div>
+      <div class="fr"><div class="fn">03</div><div><div class="ft">Works Fully Offline</div><div class="fd3">Barcode lookups run entirely against a local database on your device. No internet required for most scans. This is not a connectivity feature — it is how the app is built. Works the same in a supermarket basement with no signal.</div><div class="tag tg">Offline First</div></div></div>
+      <div class="fr"><div class="fn">04</div><div><div class="ft">Four Ways to Scan</div><div class="fd3">Barcode scan, ingredient OCR (photograph the ingredient panel), gallery import, or manual paste. If a barcode is not in the database, you land on a submission screen to contribute it or analyse it locally without sharing anything.</div><div class="tag tb">Flexible</div></div></div>
+      <div class="fr"><div class="fn">05</div><div><div class="ft">Ingredient Frequency Tracking</div><div class="fd3">Every flagged ingredient card shows how often it has appeared across your last 20 scans. If you are unknowingly eating the same additive across ten different products every week, your history will surface that pattern before it becomes a habit.</div><div class="tag tb">Pattern Tracking</div></div></div>
+      <div class="fr"><div class="fn">06</div><div><div class="ft">Compare Any Two Products</div><div class="fd3">Select any two products from your history and open a side-by-side comparison: scores, banned and caution counts, full ingredient lists, and a verdict naming the better pick with the point difference. Also available from Discover for your two most recent scans.</div><div class="tag tb">Compare</div></div></div>
+      <div class="fr"><div class="fn">07</div><div><div class="ft">Brand Deep-Dive</div><div class="fd3">Tap any brand name on a result screen to open its dedicated page. Every product from that brand in the database sorted by score, with a breakdown bar showing what proportion fall into Good, Average, and Poor bands.</div><div class="tag tb">Discover</div></div></div>
+      <div class="fr"><div class="fn">08</div><div><div class="ft">Save, Avoid, and Personal Notes</div><div class="fd3">Bookmark any product to your Saved list for quick re-checks, or add it to Avoid as a reminder to skip it. Attach a private note to any product — it is highlighted every time you return to that result.</div><div class="tag tg">Organise</div></div></div>
+      <div class="fr"><div class="fn">09</div><div><div class="ft">NOVA Ultra-Processing Flag</div><div class="fd3">When a product is ultra-processed (NOVA 4) but has no individually flagged additives, an inline note explains the distinction so you are not misled by a clean-looking ingredient list.</div><div class="tag tg">Honest Scoring</div></div></div>
+      <div class="fr"><div class="fn">10</div><div><div class="ft">Your Data Never Leaves Your Device</div><div class="fd3">Scan history, health profiles, dietary preferences, personal notes, watchlist. All processed entirely on your phone. Never sent to servers. This is how it is built, not a policy that can change.</div><div class="tag tg">Privacy by Design</div></div></div>
+      <div class="fr"><div class="fn">11</div><div><div class="ft">Label Lie Detector</div><div class="fd3">Every claim on the front of the pack checked against the actual ingredient list. Zero Sugar hiding maltodextrin. High Protein that does not meet the EU threshold. Caught every time, with evidence.</div><div class="tag ty">Coming Soon</div></div></div>
+      <div class="fr"><div class="fn">12</div><div><div class="ft">AR Shelf Scanning</div><div class="fd3">Point your camera at a supermarket aisle and safety scores appear live above every product in view. No tapping. See the verdict before you reach for the shelf.</div><div class="tag ty">Coming Soon</div></div></div>
     </div>
   </div>
 </div>
@@ -502,7 +489,7 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
       <div class="gb gB"><span class="gb-l">B</span><span class="gb-desc">70 to 84<br>Generally good. Minor flags.</span></div>
       <div class="gb gC"><span class="gb-l">C</span><span class="gb-desc">55 to 69<br>Moderate. Worth reading.</span></div>
       <div class="gb gD"><span class="gb-l">D</span><span class="gb-desc">40 to 54<br>Caution. Multiple concerns.</span></div>
-      <div class="gb gE"><span class="gb-l">E</span><span class="gb-desc">Below 40<br>Avoid. Banned or harmful.</span></div>
+      <div class="gb gF"><span class="gb-l">F</span><span class="gb-desc">Below 40<br>Avoid. Banned or harmful.</span></div>
     </div>
   </div>
 </div>
@@ -558,13 +545,12 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <h2>Make better decisions about<br><span>what you bring home.</span></h2>
     <p>Download Labelyze. Free. No account required. Works offline from day one.</p>
     <div class="cta-badges">
-      <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge" target="_blank" rel="noopener">
-        <div class="badge-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3.18 1.37C2.47 1.77 2 2.53 2 3.41v17.18c0 .88.47 1.64 1.18 2.04l.1.06 9.62-9.62v-.23L3.28 3.31l-.1.06Z" fill="#4285F4"/><path d="m16.11 15.79-3.2-3.2v-.23l3.2-3.2.07.04 3.8 2.16c1.08.62 1.08 1.62 0 2.23l-3.8 2.16-.07.04Z" fill="#FBBC04"/><path d="m16.18 15.75-3.27-3.26L3.18 22.21c.36.38.94.43 1.59.06l11.41-6.52" fill="#EA4335"/><path d="M16.18 8.25 4.77 1.73C4.12 1.36 3.54 1.41 3.18 1.8l9.73 9.72 3.27-3.27Z" fill="#34A853"/></svg></div>
-        <div class="badge-text"><span class="badge-sub">Get it on</span><span class="badge-name">Google Play</span></div>
+      <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" height="48">
       </a>
-      <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
-        <div class="badge-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" fill="rgba(91,184,255,0.12)" stroke="rgba(91,184,255,0.4)" stroke-width="1.2"/><path d="M10 22 L16 10 L22 22 M12.5 18 H19.5" stroke="#5BB8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
-        <div class="badge-text"><span class="badge-sub">Available on</span><span class="badge-name">Indus App Store</span></div>
+      <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge badge-img" target="_blank" rel="noopener">
+        <img src="https://www.indusappstore.com/images/badge/get-it-on-indus-appstore.png" alt="Available on Indus App Store" height="48"
+          onerror="this.onerror=null;this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;gap:10px;padding:4px 8px\'><svg width=28 height=28 viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'><circle cx=50 cy=50 r=50 fill=\'#1A237E\'/><circle cx=50 cy=22 r=11 fill=\'#FFA726\'/><path d=\'M32 36 L50 52 L68 36 L68 44 L50 60 L32 44 Z\' fill=\'#FF7043\'/><path d=\'M32 54 L50 70 L68 54 L68 62 L50 78 L32 62 Z\' fill=\'#E91E8C\'/></svg><div><div style=\'font-size:9px;color:var(--w3);letter-spacing:.07em;text-transform:uppercase\'>Available on</div><div style=\'font-family:var(--fd);font-size:14px;font-weight:700;color:var(--w1)\'>Indus App Store</div></div></div>'">
       </a>
     </div>
   </div>
@@ -579,14 +565,14 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <div class="flinks">
     <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
     <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X</a>
-    <a href="/cdn-cgi/l/email-protection#ec8a83998288899eac808d8e8980959689c28582">founder&#64;labelyze.in</a>
+    <a href="mailto:founder@labelyze.in">founder&#64;labelyze.in</a>
     <a onclick="openPP()">Privacy</a>
     <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
   </div>
 </footer>
 
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var html=document.documentElement;
   var saved=localStorage.getItem('lyz_theme')||'dark';
