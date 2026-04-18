@@ -50,22 +50,42 @@ Paste or type ingredients from online listings, damaged packaging, or imported p
 
 ---
 
+
 ## Screenshots
 
 <p align="center">
-  <img src="snapshots/onboarding-1.png" width="220" />
-  <img src="snapshots/onboarding-2.png" width="220" />
-  <img src="snapshots/scanner.png" width="220" />
+  <img src="snapshots/onboarding-1.png" width="220" /><br>
+  <b>Onboarding · Regulatory Gap</b>
 </p>
 
 <p align="center">
-  <img src="snapshots/history.png" width="220" />
-  <img src="snapshots/discover.png" width="220" />
-  <img src="snapshots/browse.png" width="220" />
+  <img src="snapshots/onboarding-2.png" width="220" /><br>
+  <b>Onboarding · Real Scan Example</b>
 </p>
 
 <p align="center">
-  <img src="snapshots/profile.png" width="220" />
+  <img src="snapshots/scanner.png" width="220" /><br>
+  <b>Scanner · Barcode & Ingredient Scan</b>
+</p>
+
+<p align="center">
+  <img src="snapshots/history.png" width="220" /><br>
+  <b>History · Recent Scan Trail</b>
+</p>
+
+<p align="center">
+  <img src="snapshots/discover.png" width="220" /><br>
+  <b>Discover · Better Everyday Picks</b>
+</p>
+
+<p align="center">
+  <img src="snapshots/browse.png" width="220" /><br>
+  <b>Browse · Category Rankings</b>
+</p>
+
+<p align="center">
+  <img src="snapshots/profile.png" width="220" /><br>
+  <b>Profile · Preferences & Dashboard</b>
 </p>
 
 ---
