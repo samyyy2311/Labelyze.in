@@ -32,7 +32,3 @@ The app auto-checks for database and APK updates from this repo.
 ## Database Updates
 
 The product database (`labelyze_india.db`) is updated independently of the app. New products are added via releases tagged like `db-YYYY-MM-DD`. The app downloads these automatically in the background.
-
-## License
-
-MIT
