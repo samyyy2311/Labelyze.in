@@ -2,9 +2,12 @@
 
 India’s first global-standard product scanner for food, medicine, cosmetics, and baby products.
 
-Labelyze helps people understand what they buy by checking ingredients against **FSSAI, EU, and FDA standards** and translating labels into clear, practical insights.
+Labelyze helps people understand what they buy by checking ingredients against **FSSAI, EU, and FDA standards** and turning labels into clear, practical insights.
 
-**Website:** https://labelyze.in
+<p align="center">
+  <a href="https://labelyze.in">Website</a> •
+  <a href="https://github.com/samyyy2311/Labelyze.in/releases/latest">Download APK</a>
+</p>
 
 ---
 
@@ -22,11 +25,11 @@ Labelyze closes that gap by helping users scan products and instantly understand
 
 ### Barcode Scan
 
-Point your camera at a barcode. Results load from the on-device database with no internet required.
+Point your camera at a barcode. Results load instantly from the on-device database with no internet required.
 
 ### Ingredient Scan
 
-Use OCR to scan ingredient lists directly from the label when no barcode is available.
+Use OCR to read ingredient lists directly from packaging when no barcode is available.
 
 ### Manual Entry
 
@@ -34,61 +37,66 @@ Paste or type ingredients from online listings, damaged packaging, or imported p
 
 ---
 
-## Features
+## Core Features
 
-* 500+ Indian products in the offline database
-* Multi-regulator checks: FSSAI, EU, FDA
-* Smart scoring with plain-English explanations
-* Nutrition analysis with HIGH / MED / LOW context
-* Health condition and allergen personalization
-* Scan history and saved products
-* Product comparison tools
-* Light mode and dark mode
-* Fully offline experience
-* No account required
-* Nothing leaves your phone
+- 500+ Indian products in the offline database  
+- Multi-regulator checks: FSSAI, EU, FDA  
+- Smart scoring with plain-English explanations  
+- Nutrition analysis with HIGH / MED / LOW context  
+- Health condition and allergen personalization  
+- Scan history and saved products  
+- Product comparison tools  
+- Light mode and dark mode  
+- Fully offline experience  
+- No account required  
+- Nothing leaves your phone  
 
 ---
 
-
-
-## Snapshots
+## Product Tour
 
 <table align="center">
 <tr>
 <td align="center">
 <img src="snapshots/onboarding-1.png" width="220"/><br>
-<b>Onboarding · Regulatory Gap</b>
+<b>Onboarding</b><br>
+Regulatory Gap
 </td>
 <td align="center">
 <img src="snapshots/onboarding-2.png" width="220"/><br>
-<b>Onboarding · Real Scan Example</b>
+<b>Onboarding</b><br>
+Real Scan Example
 </td>
 <td align="center">
 <img src="snapshots/scanner.png" width="220"/><br>
-<b>Scanner · Barcode & Ingredient Scan</b>
+<b>Scanner</b><br>
+Barcode & Ingredient Scan
 </td>
 </tr>
 
 <tr>
 <td align="center">
 <img src="snapshots/history.png" width="220"/><br>
-<b>History · Recent Scan Trail</b>
+<b>History</b><br>
+Recent Scan Trail
 </td>
 <td align="center">
 <img src="snapshots/discover.png" width="220"/><br>
-<b>Discover · Better Everyday Picks</b>
+<b>Discover</b><br>
+Better Everyday Picks
 </td>
 <td align="center">
 <img src="snapshots/browse.png" width="220"/><br>
-<b>Browse · Category Rankings</b>
+<b>Browse</b><br>
+Category Rankings
 </td>
 </tr>
 
 <tr>
 <td align="center" colspan="3">
 <img src="snapshots/profile.png" width="220"/><br>
-<b>Profile · Preferences & Dashboard</b>
+<b>Profile</b><br>
+Preferences & Dashboard
 </td>
 </tr>
 </table>
@@ -109,7 +117,7 @@ The app can automatically check for APK and database updates from this repositor
 
 The product database (`labelyze_india.db`) updates independently from the app.
 
-New releases are published with tags such as:
+New releases are published using tags such as:
 
 `db-YYYY-MM-DD`
 
@@ -119,30 +127,28 @@ The app can download updates automatically in the background.
 
 ## Roadmap
 
-Labelyze is being built in phases.
+### v1.1 Quick Wins
 
-### v1.1 — Quick Wins
+- Non-food scoring fixes for cosmetics and household products  
+- Ingredient watchlist for custom avoids  
+- Better not-found barcode flow with OCR suggestions  
+- Shareable scan result cards for WhatsApp and social sharing  
 
-* Non-food scoring fixes for cosmetics and household products
-* Ingredient watchlist for custom avoids
-* Better not-found barcode flow with OCR suggestions
-* Shareable scan result cards for WhatsApp and social sharing
+### v2.0 Major Features
 
-### v2.0 — Major Features
+- Label Lie Detector for misleading front-pack claims  
+- Better product alternatives for low scores  
+- Monthly insights and progress reports  
+- Family profiles with separate preferences  
+- Contribution tracking for missing products  
 
-* Label Lie Detector for misleading front-pack claims
-* Better product alternatives for low scores
-* Monthly insights and progress reports
-* Family profiles with separate preferences
-* Contribution tracking for missing products
+### v3.0 Long Term Vision
 
-### v3.0 — Long Term Vision
-
-* AR shelf scanning while shopping
-* Medicine scanner
-* Cosmetics scanner
-* Price vs health score comparisons
-* Lightweight community reviews
+- AR shelf scanning while shopping  
+- Medicine scanner  
+- Cosmetics scanner  
+- Price vs health score comparisons  
+- Lightweight community reviews  
 
 ---
 
@@ -156,10 +162,10 @@ Not copied from western databases.
 
 ## Privacy First
 
-* No account needed
-* No unnecessary tracking
-* Offline-first design
-* Nothing leaves your phone unless you choose to share it
+- No account needed  
+- No unnecessary tracking  
+- Offline-first design  
+- Nothing leaves your phone unless you choose to share it  
 
 ---
 
@@ -168,3 +174,8 @@ Not copied from western databases.
 Actively building and improving.
 
 ---
+
+## Creator
+
+Built by Samarth Lad
+```
