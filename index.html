@@ -50,59 +50,43 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:500;widt
 [data-theme="light"] nav::after{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.12),transparent)}
 [data-theme="light"] .nl:hover{background:rgba(26,35,56,0.06)}
 [data-theme="light"] .tt{background:rgba(26,35,56,0.06)}
-/* Hero eyebrow pill */
 [data-theme="light"] .ep{background:rgba(91,184,255,0.08);border-color:rgba(91,184,255,0.25)}
-/* Scan animation card */
 [data-theme="light"] .pc2{background:var(--s2);border-color:var(--b2)}
 [data-theme="light"] .pl span{background:var(--b2)}
-/* Stats grid */
 [data-theme="light"] .sg{background:var(--b1)}
 [data-theme="light"] .sc{background:#FFFFFF}
 [data-theme="light"] .sc:hover{background:var(--s1)}
 [data-theme="light"] .sfn{border-color:var(--b1)}
-/* Standards cards */
 [data-theme="light"] .stdc{background:#FFFFFF;box-shadow:0 1px 4px rgba(26,35,56,0.06)}
 [data-theme="light"] .stdc::after{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.08),transparent)}
 [data-theme="light"] .also-label{color:var(--w3)}
 [data-theme="light"] .ap{background:#FFFFFF;border-color:var(--b1)}
-/* Feature list */
 [data-theme="light"] .fl2{background:var(--b1)}
 [data-theme="light"] .fr{background:#FFFFFF}
 [data-theme="light"] .fr:hover{background:var(--s1)}
 [data-theme="light"] .fn{color:var(--b2)}
-/* Impact section */
 [data-theme="light"] .isec{background:var(--s1)}
 [data-theme="light"] .isec::before{background:radial-gradient(ellipse,rgba(91,184,255,0.1) 0%,transparent 65%)}
-/* Scoring */
 [data-theme="light"] .scores{background:#FFFFFF;box-shadow:0 1px 4px rgba(26,35,56,0.06)}
-[data-theme="light"] .scores-right > .scores:last-child{background:#FFFFFF}
+[data-theme="light"] .scores-right>.scores:last-child{background:#FFFFFF}
 [data-theme="light"] .gb{background:var(--s1)}
 [data-theme="light"] .gA{background:rgba(0,184,148,0.08);border-color:rgba(0,184,148,0.3)}
 [data-theme="light"] .gB{background:rgba(91,184,255,0.08);border-color:rgba(91,184,255,0.3)}
 [data-theme="light"] .gC{background:rgba(240,169,74,0.08);border-color:rgba(240,169,74,0.3)}
 [data-theme="light"] .gD{background:rgba(242,140,82,0.08);border-color:rgba(242,140,82,0.3)}
 [data-theme="light"] .gF{background:rgba(255,92,92,0.08);border-color:rgba(255,92,92,0.3)}
-/* Comparison table */
 [data-theme="light"] .cmp{border-color:var(--b1)}
 [data-theme="light"] .cr2{border-color:var(--b1)}
 [data-theme="light"] .ch2{background:var(--s1)}
 [data-theme="light"] .cr2:not(.ch2):hover{background:var(--s1)}
-/* Mission */
 [data-theme="light"] .mssec{background:var(--s1)}
 [data-theme="light"] .principle{border-color:var(--b1)}
-/* Verticals */
 [data-theme="light"] .vc{background:#FFFFFF;box-shadow:0 1px 4px rgba(26,35,56,0.06)}
 [data-theme="light"] .vc::after{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.08),transparent)}
-/* CTA wrap */
 [data-theme="light"] .cta-wrap{background:#FFFFFF;border-color:var(--b1);box-shadow:0 2px 20px rgba(26,35,56,0.06)}
 [data-theme="light"] .cta-wrap::before{background:linear-gradient(90deg,transparent,rgba(26,35,56,0.1),transparent)}
-/* Badges */
-[data-theme="light"] .badge{background:#FFFFFF;border-color:var(--b2)}
-[data-theme="light"] .badge:hover{background:var(--s1);border-color:var(--a)}
-/* Privacy overlay */
 [data-theme="light"] #lov{background:var(--bg)}
 [data-theme="light"] .ov-nav{background:var(--bg)}
-/* Mobile menu */
 [data-theme="light"] #mobl{background:rgba(241,237,230,0.98)}
 nav::before{content:'';position:absolute;inset:0;border-radius:100px;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,0.08) 0%,transparent 55%)}
 nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.44),transparent);pointer-events:none}
@@ -157,12 +141,33 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .fb2{position:absolute;bottom:4px;left:-8px;transform:translateX(-100%);background:rgba(91,184,255,.08);border:.5px solid rgba(91,184,255,.24);border-radius:8px;padding:5px 9px;font-size:10px;color:var(--a);white-space:nowrap;font-weight:600;animation:sli 5s ease-in-out infinite}
 @keyframes sli{0%,38%{opacity:0;transform:translateX(calc(-100% - 6px))}65%,100%{opacity:1;transform:translateX(-100%)}}
 
-/* Store badges — pure typography, both identical */
+/* Store badges */
 .badges{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
-.badge{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;padding:12px 22px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:14px;text-decoration:none;transition:background .2s,border-color .2s,transform .2s;min-width:160px}
-.badge:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.24);transform:translateY(-2px)}
-.badge-sub{font-size:9px;color:var(--w3);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fb)}
-.badge-name{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--w1);line-height:1.2;letter-spacing:-0.01em}
+/* Google Play — let SVG define the width naturally */
+.badge-gplay{
+  display:inline-flex;align-items:center;
+  height:52px;
+  background:#000;border-radius:9px;
+  border:1px solid rgba(255,255,255,0.18);
+  text-decoration:none;flex-shrink:0;
+  overflow:hidden;
+  transition:transform .2s,opacity .2s;
+}
+.badge-gplay svg{display:block;height:52px;width:auto;flex-shrink:0}
+/* GitHub — hardcode same width as Play SVG renders at 52px: ~175px */
+.badge-gh{
+  display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  height:52px;width:175px;
+  background:#000;border-radius:9px;
+  border:1px solid rgba(255,255,255,0.18);
+  text-decoration:none;flex-shrink:0;
+  transition:transform .2s,opacity .2s;
+}
+.badge-gplay:hover,.badge-gh:hover{transform:translateY(-2px);opacity:.85}
+.badge-gh-text{display:flex;flex-direction:column;gap:1px}
+.badge-gh-sub{font-size:9px;color:rgba(255,255,255,0.55);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fb)}
+.badge-gh-name{font-family:var(--fd);font-size:16px;font-weight:700;color:#ffffff;line-height:1.2;letter-spacing:-0.01em}
+[data-theme="light"] .badge-gplay,[data-theme="light"] .badge-gh{background:#000;border-color:rgba(0,0,0,0.15)}
 .bnote{font-size:11px;color:var(--w3);text-align:center;margin-top:14px;letter-spacing:.02em}
 
 /* Stats */
@@ -217,20 +222,17 @@ nav::after{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;back
 .istat span{color:var(--a)}
 .isub{font-size:15px;font-weight:300;color:var(--w2);max-width:480px;margin:0 auto;line-height:1.75}
 
-/* SCORING — 2-col top, grade scale full-width below */
+/* SCORING */
 .scoreg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px;align-items:stretch}
 .scores{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--r);padding:24px;backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
-/* Left column — penalties card fills full height */
-.scoreg > .scores{height:100%}
-/* Right column wrapper — flex so two cards share total height equally */
+.scoreg>.scores{height:100%}
 .scores-right{display:flex;flex-direction:column;gap:16px}
-.scores-right > .scores:last-child{flex:1}
+.scores-right>.scores:last-child{flex:1}
 .scorest{font-family:var(--fd);font-size:11px;font-weight:700;color:var(--w3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 .scorerow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:.5px solid var(--b1);font-size:13px;color:var(--w2)}
 .scorerow:last-child{border-bottom:none}
 .scorerow .v{font-family:var(--fd);font-weight:700;font-size:13px;white-space:nowrap;margin-left:12px;flex-shrink:0}
 .vn{color:var(--red)}.vp{color:var(--green)}
-/* Grade scale: full-width horizontal strip */
 .grade-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
 .gb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:16px 12px;border-radius:var(--r);border:1px solid var(--card-border);background:var(--card-bg);text-align:center}
 .gb-l{font-family:var(--fd);font-weight:900;font-size:28px;line-height:1}
@@ -346,9 +348,10 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   .fn{font-size:22px}
   .so{width:220px}
   .badges{flex-direction:column;align-items:center}
-  .badge{width:100%;max-width:280px;justify-content:center}
+  .badge-gplay,.badge-gh{height:44px}
+  .badge-gplay svg{height:44px}
+  .badge-gh{width:148px}
   .cta-badges{flex-direction:column;align-items:center}
-  .cta-badges .badge{width:100%;max-width:280px;justify-content:center}
 }
 </style>
 </head>
@@ -366,32 +369,24 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <div class="ov-inn">
     <h1 class="ov-h1">Privacy Policy</h1>
     <span class="ov-date">Effective: 1 April 2026</span>
-
     <div class="ov-h2">What we collect</div>
     <p class="ov-p">Labelyze does not collect any personal information. There is no account, no login, and no profile linked to you.</p>
     <p class="ov-p">Your scan history, health profile, allergen selections, dietary preferences, ingredient watchlist, personal notes, and weekly goal are all stored locally on your device. None of this data is transmitted to any server.</p>
-
     <div class="ov-h2">Product submissions</div>
     <p class="ov-p">If you choose to submit a missing product, you are sharing: the product name, brand, barcode, category, ingredients, and optionally nutrition information. This is submitted to a database managed by CaffeineLabs for the purpose of improving the product database. Submissions are opt-in only. You can turn off sharing at any time in Profile &gt; Data and Privacy, or during onboarding.</p>
     <p class="ov-p">When sharing is turned off, no data from your device is sent anywhere.</p>
-
     <div class="ov-h2">Analytics and advertising</div>
     <p class="ov-p">Labelyze contains no analytics, no advertising SDKs, and no third-party trackers of any kind.</p>
-
     <div class="ov-h2">Notifications</div>
     <p class="ov-p">If you opt in to the weekly summary notification, this is scheduled locally on your device. No data is sent to a server to trigger it.</p>
-
     <div class="ov-h2">App review prompt</div>
     <p class="ov-p">The app may ask you to rate it on the Play Store using the standard in-app review prompt. This prompt is provided by Google. No data is collected or shared by Labelyze as part of this prompt.</p>
-
     <div class="ov-h2">Children</div>
     <p class="ov-p">Labelyze does not knowingly collect data from anyone, including children. No personal data is collected at all.</p>
-
     <div class="ov-h2">Changes</div>
     <p class="ov-p">If this policy changes, the updated version will be published at labelyze.in/privacy with a new effective date.</p>
-
     <div class="ov-h2">Contact</div>
-    <p class="ov-p">For any privacy questions: <a href="/cdn-cgi/l/email-protection#127a777e7e7d527e7370777e6b68773c7b7c">hello&#64;labelyze.in</a></p>
+    <p class="ov-p">For any privacy questions: <a href="mailto:hello@labelyze.in">hello&#64;labelyze.in</a></p>
   </div>
 </div>
 
@@ -439,13 +434,24 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     </div>
     <div class="fu d4">
       <div class="badges">
-        <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge" target="_blank" rel="noopener">
-          <span class="badge-sub">Get it on</span>
-          <span class="badge-name">Google Play</span>
+        <!-- Official Google Play badge SVG -->
+        <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge-gplay" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.96 70.87">
+            <defs><style>.gp0{fill:#4285f4}.gp1{fill:#a6a6a6}.gp2{stroke:#fff;stroke-miterlimit:10;stroke-width:.2px;fill:#fff}.gp3{fill:#fff}.gp4{fill:#34a853}.gp5{fill:#fbbc04}.gp6{fill:#ea4335}</style></defs>
+            <rect x="-.11" width="239.17" height="70.87" rx="8.86" ry="8.86"/>
+            <path class="gp1" d="M230.21,1.42c4.1,0,7.44,3.34,7.44,7.44v53.15c0,4.1-3.34,7.44-7.44,7.44H8.75c-4.1,0-7.44-3.34-7.44-7.44V8.86C1.31,4.76,4.65,1.42,8.75,1.42h221.46M230.21,0H8.75C3.88,0-.11,3.99-.11,8.86v53.15c0,4.87,3.99,8.86,8.86,8.86h221.46c4.87,0,8.86-3.99,8.86-8.86V8.86c0-4.87-3.99-8.86-8.86-8.86h0Z"/>
+            <g><path class="gp2" d="M83.9,18.15c0,1.48-.44,2.67-1.32,3.55-1,1.05-2.3,1.57-3.9,1.57s-2.84-.53-3.91-1.59c-1.07-1.06-1.61-2.38-1.61-3.96s.54-2.89,1.61-3.96c1.07-1.06,2.38-1.6,3.91-1.6.76,0,1.49.15,2.18.44.69.3,1.25.69,1.66,1.19l-.93.94c-.7-.84-1.67-1.26-2.91-1.26-1.12,0-2.09.39-2.9,1.18s-1.22,1.81-1.22,3.06.41,2.28,1.22,3.06c.82.79,1.78,1.18,2.9,1.18,1.19,0,2.18-.4,2.97-1.19.51-.52.81-1.23.89-2.15h-3.86v-1.28h5.15c.05.28.07.54.07.8Z"/><path class="gp2" d="M92.07,13.71h-4.84v3.37h4.37v1.28h-4.37v3.37h4.84v1.31h-6.21v-10.63h6.21v1.31h0Z"/><path class="gp2" d="M97.83,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gp2" d="M106.08,23.03v-10.63h1.36v10.63h-1.36Z"/><path class="gp2" d="M113.51,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gp2" d="M130.3,21.66c-1.05,1.08-2.34,1.61-3.9,1.61s-2.85-.54-3.9-1.61c-1.05-1.07-1.57-2.39-1.57-3.94s.52-2.87,1.57-3.94c1.04-1.08,2.34-1.61,3.9-1.61s2.84.54,3.89,1.62c1.05,1.08,1.57,2.39,1.57,3.93s-.52,2.87-1.57,3.94ZM123.52,20.77c.79.8,1.75,1.19,2.89,1.19s2.1-.4,2.89-1.19c.79-.8,1.18-1.81,1.18-3.05s-.4-2.26-1.18-3.05c-.78-.8-1.75-1.19-2.89-1.19s-2.1.4-2.89,1.19c-.78.8-1.18,1.81-1.18,3.05s.4,2.26,1.18,3.05Z"/><path class="gp2" d="M133.79,23.03v-10.63h1.66l5.17,8.27h.06l-.06-2.05v-6.22h1.37v10.63h-1.43l-5.41-8.67h-.06l.06,2.05v6.62h-1.37,0Z"/></g>
+            <path class="gp3" d="M120.61,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM120.61,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM104.11,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM104.11,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM84.48,40.85v3.2h7.65c-.23,1.8-.83,3.11-1.74,4.03-1.11,1.11-2.85,2.34-5.91,2.34-4.71,0-8.39-3.8-8.39-8.51s3.68-8.51,8.39-8.51c2.54,0,4.4,1,5.76,2.28l2.26-2.26c-1.91-1.83-4.45-3.22-8.02-3.22-6.45,0-11.87,5.25-11.87,11.7s5.42,11.7,11.87,11.7c3.48,0,6.11-1.14,8.16-3.28,2.11-2.11,2.77-5.08,2.77-7.48,0-.74-.06-1.43-.17-2h-10.76,0ZM164.75,43.33c-.63-1.68-2.54-4.8-6.45-4.8s-7.11,3.05-7.11,7.53c0,4.22,3.2,7.53,7.48,7.53,3.45,0,5.45-2.11,6.28-3.34l-2.57-1.71c-.86,1.26-2.03,2.08-3.71,2.08s-2.88-.77-3.65-2.28l10.08-4.17-.34-.86h0ZM154.47,45.84c-.09-2.91,2.26-4.4,3.94-4.4,1.31,0,2.43.66,2.8,1.6l-6.74,2.8ZM146.28,53.15h3.31v-22.15h-3.31v22.15ZM140.86,40.22h-.11c-.74-.88-2.17-1.68-3.97-1.68-3.77,0-7.22,3.31-7.22,7.56s3.45,7.51,7.22,7.51c1.8,0,3.22-.8,3.97-1.71h.11v1.08c0,2.88-1.54,4.42-4.03,4.42-2.03,0-3.28-1.46-3.8-2.68l-2.88,1.2c.83,2,3.03,4.45,6.68,4.45,3.88,0,7.16-2.28,7.16-7.85v-13.53h-3.14v1.23ZM137.06,50.64c-2.28,0-4.2-1.91-4.2-4.54s1.91-4.6,4.2-4.6,4.03,1.94,4.03,4.6-1.77,4.54-4.03,4.54ZM180.26,31h-7.92v22.15h3.31v-8.39h4.62c3.66,0,7.27-2.65,7.27-6.88s-3.6-6.88-7.27-6.88ZM180.34,41.68h-4.7v-7.59h4.7c2.47,0,3.87,2.05,3.87,3.8s-1.4,3.8-3.87,3.8h0ZM200.77,38.5c-2.39,0-4.87,1.05-5.9,3.39l2.94,1.23c.63-1.23,1.79-1.62,3.02-1.62,1.71,0,3.45,1.03,3.48,2.85v.23c-.6-.34-1.88-.86-3.45-.86-3.16,0-6.38,1.74-6.38,4.99,0,2.96,2.59,4.87,5.5,4.87,2.22,0,3.45-1,4.22-2.16h.11v1.71h3.19v-8.49c0-3.93-2.94-6.13-6.73-6.13h0ZM200.38,50.63c-1.08,0-2.59-.54-2.59-1.88,0-1.71,1.88-2.37,3.5-2.37,1.45,0,2.14.31,3.02.74-.26,2.05-2.02,3.5-3.93,3.5ZM219.12,38.98l-3.79,9.6h-.11l-3.93-9.6h-3.56l5.9,13.42-3.36,7.47h3.45l9.09-20.89h-3.68ZM189.35,53.15h3.31v-22.15h-3.31v22.15Z"/>
+            <g><path class="gp6" d="M36.6,34.41l-18.86,20.02s0,0,0,.01c.58,2.17,2.56,3.77,4.92,3.77.94,0,1.83-.26,2.58-.7l.06-.04,21.23-12.25-9.94-10.82Z"/><path class="gp5" d="M55.68,31h-.02s-9.17-5.33-9.17-5.33l-10.33,9.19,10.36,10.36,9.12-5.26c1.6-.86,2.68-2.55,2.68-4.49s-1.07-3.61-2.65-4.47h0Z"/><path class="gp0" d="M17.73,16.44c-.11.42-.17.86-.17,1.31v35.38c0,.45.06.89.17,1.31l19.51-19.51-19.51-18.49Z"/><path class="gp4" d="M36.74,35.43l9.76-9.76-21.21-12.3c-.77-.46-1.67-.73-2.63-.73-2.36,0-4.34,1.6-4.92,3.78h0s19,19,19,19h0Z"/></g>
+          </svg>
         </a>
-        <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
-          <span class="badge-sub">Available on</span>
-          <span class="badge-name">Indus App Store</span>
+        <!-- GitHub Releases badge -->
+        <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge-gh" target="_blank" rel="noopener">
+          <svg class="badge-gh-icon" height="26" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <div class="badge-gh-text">
+            <span class="badge-gh-sub">Get it on</span>
+            <span class="badge-gh-name">GitHub</span>
+          </div>
         </a>
       </div>
       <p class="bnote">Free to download · No account needed · Works fully offline</p>
@@ -454,8 +460,8 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
 </div>
 
 <div class="sg rv">
-  <div class="sc"><div class="sn">320+</div><div class="sl2">Ingredients tracked, each with a cited regulatory source</div></div>
-  <div class="sc"><div class="sn">5</div><div class="sl2">Regulatory bodies cross-checked on every scan</div></div>
+  <div class="sc"><div class="sn">400+</div><div class="sl2">Ingredients tracked, each with a cited regulatory source</div></div>
+  <div class="sc"><div class="sn">3</div><div class="sl2">Primary regulatory bodies cross-checked on every scan</div></div>
   <div class="sc"><div class="sn">100%</div><div class="sl2">Of your personal health data stays on your device. Always.</div></div>
   <div class="sc"><div class="sn">Free</div><div class="sl2">To download and start scanning. No account. No ads.</div></div>
   <div class="sfn"><p>Based on comparative analysis of EU EFSA Regulation (EC) No 1333/2008, FSSAI Food Safety and Standards Act 2006, and US FDA Code of Federal Regulations Title 21.</p></div>
@@ -516,10 +522,10 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
         <div class="scorerow"><span>Trans fats or vanaspati</span><span class="v vn">-18 pts</span></div>
         <div class="scorerow"><span>Partially hydrogenated oils</span><span class="v vn">-15 pts</span></div>
         <div class="scorerow"><span>Refined flour (maida)</span><span class="v vn">-5 pts</span></div>
-        <div class="scorerow"><span>High additive density</span><span class="v vn">up to -12 pts</span></div>
-        <div class="scorerow"><span>Sugar &gt; 22.5g per 100g</span><span class="v vn">-10 pts</span></div>
-        <div class="scorerow"><span>Sodium &gt; 1,500mg per 100g</span><span class="v vn">-8 pts</span></div>
-        <div class="scorerow"><span>Saturated fat &gt; 5g per 100g</span><span class="v vn">-5 pts</span></div>
+        <div class="scorerow"><span>High additive density</span><span class="v vn">up to -10 pts</span></div>
+        <div class="scorerow"><span>Sugar &gt; 22.5g per 100g</span><span class="v vn">-14 pts</span></div>
+        <div class="scorerow"><span>Sodium &gt; 1,500mg per 100g</span><span class="v vn">-12 pts</span></div>
+        <div class="scorerow"><span>Saturated fat &gt; 5g per 100g</span><span class="v vn">-6 pts</span></div>
       </div>
       <div class="scores-right">
         <div class="scores">
@@ -532,10 +538,10 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
         <div class="scores">
           <div class="scorest">What the score is not</div>
           <p style="font-size:13px;color:var(--w2);line-height:1.7">A decision aid, not a medical opinion. Based on publicly available regulatory data. Every penalty and every bonus is shown to you with its reason. No unexplained numbers.</p>
+          <p style="font-size:11px;color:var(--w3);line-height:1.6;margin-top:12px;padding-top:12px;border-top:.5px solid var(--b1)">Full scoring covers 5 layers with 25+ factors. Key penalties shown above.</p>
         </div>
       </div>
     </div>
-    <!-- Grade scale: full-width horizontal strip -->
     <div class="grade-strip rv">
       <div class="gb gA"><span class="gb-l">A</span><span class="gb-desc">85 to 100<br>Clean. Few or no concerns.</span></div>
       <div class="gb gB"><span class="gb-l">B</span><span class="gb-desc">70 to 84<br>Generally good. Minor flags.</span></div>
@@ -553,13 +559,13 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <p class="ss rv">These are not rare edge cases. They are everyday ingredients in products available across India.</p>
     <div class="cmp rv">
       <div class="cr2 ch2"><span>Ingredient</span><span class="cc">FSSAI</span><span class="cc">EU EFSA</span><span class="cc hide-sm">US FDA</span></div>
-      <div class="cr2"><span>Sodium Cyclamate</span><span class="cok cc">Allowed</span><span class="cok cc">Allowed</span><span class="cban cc hide-sm">Banned</span></div>
-      <div class="cr2"><span>Tartrazine E102</span><span class="cok cc">Allowed</span><span class="cmid cc">Warning</span><span class="cok cc hide-sm">Allowed</span></div>
-      <div class="cr2"><span>Titanium Dioxide E171</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cmid cc hide-sm">Restricted</span></div>
-      <div class="cr2"><span>Potassium Bromate</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
-      <div class="cr2"><span>Brominated Vegetable Oil</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
-      <div class="cr2"><span>Azodicarbonamide</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
+      <div class="cr2"><span>Tartrazine E102</span><span class="cok cc">Allowed</span><span class="cmid cc">Warning req.</span><span class="cok cc hide-sm">Allowed</span></div>
+      <div class="cr2"><span>Erythrosine E127</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cmid cc hide-sm">Restricted</span></div>
+      <div class="cr2"><span>Titanium Dioxide E171</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cok cc hide-sm">Allowed</span></div>
       <div class="cr2"><span>Vanaspati (trans fats)</span><span class="cok cc">Allowed</span><span class="cban cc">Banned</span><span class="cban cc hide-sm">Banned</span></div>
+      <div class="cr2"><span>Saccharin</span><span class="cok cc">Allowed</span><span class="cmid cc">Restricted</span><span class="cok cc hide-sm">Allowed</span></div>
+      <div class="cr2"><span>Sunset Yellow E110</span><span class="cok cc">Allowed</span><span class="cmid cc">Warning req.</span><span class="cok cc hide-sm">Allowed</span></div>
+      <div class="cr2"><span>Carmoisine E122</span><span class="cok cc">Allowed</span><span class="cmid cc">Warning req.</span><span class="cban cc hide-sm">Banned</span></div>
     </div>
   </div>
 </div>
@@ -597,13 +603,22 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
     <h2>Make better decisions about<br><span>what you bring home.</span></h2>
     <p>Download Labelyze. Free. No account required. Works offline from day one.</p>
     <div class="cta-badges">
-      <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge" target="_blank" rel="noopener">
-        <span class="badge-sub">Get it on</span>
-        <span class="badge-name">Google Play</span>
+      <a href="YOUR_GOOGLE_PLAY_LINK_HERE" class="badge-gplay" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.96 70.87">
+          <defs><style>.gp0{fill:#4285f4}.gp1{fill:#a6a6a6}.gp2{stroke:#fff;stroke-miterlimit:10;stroke-width:.2px;fill:#fff}.gp3{fill:#fff}.gp4{fill:#34a853}.gp5{fill:#fbbc04}.gp6{fill:#ea4335}</style></defs>
+          <rect x="-.11" width="239.17" height="70.87" rx="8.86" ry="8.86"/>
+          <path class="gp1" d="M230.21,1.42c4.1,0,7.44,3.34,7.44,7.44v53.15c0,4.1-3.34,7.44-7.44,7.44H8.75c-4.1,0-7.44-3.34-7.44-7.44V8.86C1.31,4.76,4.65,1.42,8.75,1.42h221.46M230.21,0H8.75C3.88,0-.11,3.99-.11,8.86v53.15c0,4.87,3.99,8.86,8.86,8.86h221.46c4.87,0,8.86-3.99,8.86-8.86V8.86c0-4.87-3.99-8.86-8.86-8.86h0Z"/>
+          <g><path class="gp2" d="M83.9,18.15c0,1.48-.44,2.67-1.32,3.55-1,1.05-2.3,1.57-3.9,1.57s-2.84-.53-3.91-1.59c-1.07-1.06-1.61-2.38-1.61-3.96s.54-2.89,1.61-3.96c1.07-1.06,2.38-1.6,3.91-1.6.76,0,1.49.15,2.18.44.69.3,1.25.69,1.66,1.19l-.93.94c-.7-.84-1.67-1.26-2.91-1.26-1.12,0-2.09.39-2.9,1.18s-1.22,1.81-1.22,3.06.41,2.28,1.22,3.06c.82.79,1.78,1.18,2.9,1.18,1.19,0,2.18-.4,2.97-1.19.51-.52.81-1.23.89-2.15h-3.86v-1.28h5.15c.05.28.07.54.07.8Z"/><path class="gp2" d="M92.07,13.71h-4.84v3.37h4.37v1.28h-4.37v3.37h4.84v1.31h-6.21v-10.63h6.21v1.31h0Z"/><path class="gp2" d="M97.83,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gp2" d="M106.08,23.03v-10.63h1.36v10.63h-1.36Z"/><path class="gp2" d="M113.51,23.03h-1.37v-9.32h-2.97v-1.31h7.3v1.31h-2.97s0,9.32,0,9.32Z"/><path class="gp2" d="M130.3,21.66c-1.05,1.08-2.34,1.61-3.9,1.61s-2.85-.54-3.9-1.61c-1.05-1.07-1.57-2.39-1.57-3.94s.52-2.87,1.57-3.94c1.04-1.08,2.34-1.61,3.9-1.61s2.84.54,3.89,1.62c1.05,1.08,1.57,2.39,1.57,3.93s-.52,2.87-1.57,3.94ZM123.52,20.77c.79.8,1.75,1.19,2.89,1.19s2.1-.4,2.89-1.19c.79-.8,1.18-1.81,1.18-3.05s-.4-2.26-1.18-3.05c-.78-.8-1.75-1.19-2.89-1.19s-2.1.4-2.89,1.19c-.78.8-1.18,1.81-1.18,3.05s.4,2.26,1.18,3.05Z"/><path class="gp2" d="M133.79,23.03v-10.63h1.66l5.17,8.27h.06l-.06-2.05v-6.22h1.37v10.63h-1.43l-5.41-8.67h-.06l.06,2.05v6.62h-1.37,0Z"/></g>
+          <path class="gp3" d="M120.61,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM120.61,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM104.11,38.54c-4.17,0-7.56,3.17-7.56,7.53s3.4,7.53,7.56,7.53,7.56-3.2,7.56-7.53-3.4-7.53-7.56-7.53ZM104.11,50.64c-2.28,0-4.25-1.88-4.25-4.57s1.97-4.57,4.25-4.57,4.25,1.85,4.25,4.57-1.97,4.57-4.25,4.57ZM84.48,40.85v3.2h7.65c-.23,1.8-.83,3.11-1.74,4.03-1.11,1.11-2.85,2.34-5.91,2.34-4.71,0-8.39-3.8-8.39-8.51s3.68-8.51,8.39-8.51c2.54,0,4.4,1,5.76,2.28l2.26-2.26c-1.91-1.83-4.45-3.22-8.02-3.22-6.45,0-11.87,5.25-11.87,11.7s5.42,11.7,11.87,11.7c3.48,0,6.11-1.14,8.16-3.28,2.11-2.11,2.77-5.08,2.77-7.48,0-.74-.06-1.43-.17-2h-10.76,0ZM164.75,43.33c-.63-1.68-2.54-4.8-6.45-4.8s-7.11,3.05-7.11,7.53c0,4.22,3.2,7.53,7.48,7.53,3.45,0,5.45-2.11,6.28-3.34l-2.57-1.71c-.86,1.26-2.03,2.08-3.71,2.08s-2.88-.77-3.65-2.28l10.08-4.17-.34-.86h0ZM154.47,45.84c-.09-2.91,2.26-4.4,3.94-4.4,1.31,0,2.43.66,2.8,1.6l-6.74,2.8ZM146.28,53.15h3.31v-22.15h-3.31v22.15ZM140.86,40.22h-.11c-.74-.88-2.17-1.68-3.97-1.68-3.77,0-7.22,3.31-7.22,7.56s3.45,7.51,7.22,7.51c1.8,0,3.22-.8,3.97-1.71h.11v1.08c0,2.88-1.54,4.42-4.03,4.42-2.03,0-3.28-1.46-3.8-2.68l-2.88,1.2c.83,2,3.03,4.45,6.68,4.45,3.88,0,7.16-2.28,7.16-7.85v-13.53h-3.14v1.23ZM137.06,50.64c-2.28,0-4.2-1.91-4.2-4.54s1.91-4.6,4.2-4.6,4.03,1.94,4.03,4.6-1.77,4.54-4.03,4.54ZM180.26,31h-7.92v22.15h3.31v-8.39h4.62c3.66,0,7.27-2.65,7.27-6.88s-3.6-6.88-7.27-6.88ZM180.34,41.68h-4.7v-7.59h4.7c2.47,0,3.87,2.05,3.87,3.8s-1.4,3.8-3.87,3.8h0ZM200.77,38.5c-2.39,0-4.87,1.05-5.9,3.39l2.94,1.23c.63-1.23,1.79-1.62,3.02-1.62,1.71,0,3.45,1.03,3.48,2.85v.23c-.6-.34-1.88-.86-3.45-.86-3.16,0-6.38,1.74-6.38,4.99,0,2.96,2.59,4.87,5.5,4.87,2.22,0,3.45-1,4.22-2.16h.11v1.71h3.19v-8.49c0-3.93-2.94-6.13-6.73-6.13h0ZM200.38,50.63c-1.08,0-2.59-.54-2.59-1.88,0-1.71,1.88-2.37,3.5-2.37,1.45,0,2.14.31,3.02.74-.26,2.05-2.02,3.5-3.93,3.5ZM219.12,38.98l-3.79,9.6h-.11l-3.93-9.6h-3.56l5.9,13.42-3.36,7.47h3.45l9.09-20.89h-3.68ZM189.35,53.15h3.31v-22.15h-3.31v22.15Z"/>
+          <g><path class="gp6" d="M36.6,34.41l-18.86,20.02s0,0,0,.01c.58,2.17,2.56,3.77,4.92,3.77.94,0,1.83-.26,2.58-.7l.06-.04,21.23-12.25-9.94-10.82Z"/><path class="gp5" d="M55.68,31h-.02s-9.17-5.33-9.17-5.33l-10.33,9.19,10.36,10.36,9.12-5.26c1.6-.86,2.68-2.55,2.68-4.49s-1.07-3.61-2.65-4.47h0Z"/><path class="gp0" d="M17.73,16.44c-.11.42-.17.86-.17,1.31v35.38c0,.45.06.89.17,1.31l19.51-19.51-19.51-18.49Z"/><path class="gp4" d="M36.74,35.43l9.76-9.76-21.21-12.3c-.77-.46-1.67-.73-2.63-.73-2.36,0-4.34,1.6-4.92,3.78h0s19,19,19,19h0Z"/></g>
+        </svg>
       </a>
-      <a href="YOUR_INDUS_APPSTORE_LINK_HERE" class="badge" target="_blank" rel="noopener">
-        <span class="badge-sub">Available on</span>
-        <span class="badge-name">Indus App Store</span>
+      <a href="https://github.com/samyyy2311/Labelyze.in/releases" class="badge-gh" target="_blank" rel="noopener">
+        <svg class="badge-gh-icon" height="26" viewBox="0 0 16 16" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <div class="badge-gh-text">
+          <span class="badge-gh-sub">Get it on</span>
+          <span class="badge-gh-name">GitHub</span>
+        </div>
       </a>
     </div>
   </div>
@@ -618,14 +633,14 @@ footer{border-top:.5px solid var(--b1);padding:26px 52px;display:flex;align-item
   <div class="flinks">
     <a href="https://instagram.com/labelyze.in" target="_blank" rel="noopener">Instagram</a>
     <a href="https://x.com/labelyzeapp" target="_blank" rel="noopener">X</a>
-    <a href="/cdn-cgi/l/email-protection#14727b617a7071665478757671786d6e713a7d7a">founder&#64;labelyze.in</a>
+    <a href="mailto:founder@labelyze.in">founder&#64;labelyze.in</a>
     <a onclick="openPP()">Privacy</a>
     <a href="https://caffeinelabs.in" target="_blank" rel="noopener">CaffeineLabs</a>
   </div>
 </footer>
 
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var html=document.documentElement;
   var saved=localStorage.getItem('lyz_theme')||'dark';
