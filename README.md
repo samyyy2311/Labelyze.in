@@ -1,34 +1,140 @@
 # Labelyze
 
-India's first global-standard product scanner that checks every food, medicine, cosmetic and baby product against EU and FDA safety standards.
+India’s first global-standard product scanner for food, medicine, cosmetics, and baby products.
 
-**Website:** [labelyze.in](https://labelyze.in)
+Labelyze helps people understand what they buy by checking ingredients against **FSSAI, EU, and FDA standards** and translating labels into clear, practical insights.
+
+**Website:** https://labelyze.in
+
+---
+
+## Why Labelyze
+
+Many products approved locally may carry warnings, usage limits, or restrictions in other countries.
+
+Most people read nutrition labels. Very few understand ingredient labels.
+
+Labelyze closes that gap by helping users scan products and instantly understand what is inside, what regulators say, and what may matter personally.
+
+---
 
 ## What It Does
 
-Ingredients that pass FSSAI carry active warnings or bans in the EU and FDA. Labelyze scans products and tells you what regulators in other countries think about what you're consuming.
+### Barcode Scan
 
-- **Barcode scan**: Point at any barcode. Results load from the on-device database, no internet needed.
-- **Ingredient scan** : OCR reads the ingredient list directly from the label when no barcode is available.
-- **Manual entry** : Paste or type the ingredient list for worn packaging or online shopping.
+Point your camera at a barcode. Results load from the on-device database with no internet required.
+
+### Ingredient Scan
+
+Use OCR to scan ingredient lists directly from the label when no barcode is available.
+
+### Manual Entry
+
+Paste or type ingredients from online listings, damaged packaging, or imported products.
+
+---
 
 ## Features
 
-- 500+ Indian products in the offline database
-- Three-body regulatory check: FSSAI, EU, FDA
-- Smart scoring with plain-English breakdowns
-- Nutrition analysis with HIGH / MED / LOW context
-- Health condition and allergen personalization
-- Scan history, favourites, and product comparison
-- Dark and light mode
-- Fully offline, no account required, nothing leaves your phone
+* 500+ Indian products in the offline database
+* Multi-regulator checks: FSSAI, EU, FDA
+* Smart scoring with plain-English explanations
+* Nutrition analysis with HIGH / MED / LOW context
+* Health condition and allergen personalization
+* Scan history and saved products
+* Product comparison tools
+* Light mode and dark mode
+* Fully offline experience
+* No account required
+* Nothing leaves your phone
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/scanner.png" width="230"/>
+  <img src="assets/screenshots/discover.png" width="230"/>
+  <img src="assets/screenshots/history.png" width="230"/>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/profile.png" width="230"/>
+  <img src="assets/screenshots/browse.png" width="230"/>
+</p>
+
+---
 
 ## Download
 
-Download the latest APK from [Releases](https://github.com/samyyy2311/Labelyze.in/releases/latest).
+Get the latest APK from Releases:
 
-The app auto-checks for database and APK updates from this repo.
+https://github.com/samyyy2311/Labelyze.in/releases/latest
+
+The app can automatically check for APK and database updates from this repository.
+
+---
 
 ## Database Updates
 
-The product database (`labelyze_india.db`) is updated independently of the app. New products are added via releases tagged like `db-YYYY-MM-DD`. The app downloads these automatically in the background.
+The product database (`labelyze_india.db`) updates independently from the app.
+
+New releases are published with tags such as:
+
+`db-YYYY-MM-DD`
+
+The app can download updates automatically in the background.
+
+---
+
+## Roadmap
+
+Labelyze is being built in phases.
+
+### v1.1 — Quick Wins
+
+* Non-food scoring fixes for cosmetics and household products
+* Ingredient watchlist for custom avoids
+* Better not-found barcode flow with OCR suggestions
+* Shareable scan result cards for WhatsApp and social sharing
+
+### v2.0 — Major Features
+
+* Label Lie Detector for misleading front-pack claims
+* Better product alternatives for low scores
+* Monthly insights and progress reports
+* Family profiles with separate preferences
+* Contribution tracking for missing products
+
+### v3.0 — Long Term Vision
+
+* AR shelf scanning while shopping
+* Medicine scanner
+* Cosmetics scanner
+* Price vs health score comparisons
+* Lightweight community reviews
+
+---
+
+## Built For India
+
+Designed around Indian shelves, Indian brands, and Indian buying habits.
+
+Not copied from western databases.
+
+---
+
+## Privacy First
+
+* No account needed
+* No unnecessary tracking
+* Offline-first design
+* Nothing leaves your phone unless you choose to share it
+
+---
+
+## Status
+
+Actively building and improving.
+
+---
